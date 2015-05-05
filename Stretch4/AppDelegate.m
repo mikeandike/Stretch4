@@ -16,7 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSDictionary *country = @{@"name": @"South Africa", @"population": @"53 million", @"continent": @"Africa", @"majorExport": @"diamonds"};
+    
+    NSArray *allKeys = [country allKeys];
+    
+    NSString *randObj = allKeys[arc4random() % allKeys.count];
+    NSLog(@"%@: %@", randObj, country[randObj]);
+    
+    
     return YES;
 }
 
